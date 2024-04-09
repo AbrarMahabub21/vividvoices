@@ -2,8 +2,8 @@ import express from "express";
 
 const router = express.Router();
 
-router.get("/signup", (req, res) => {
-  res.send("signup route");
-});
+router.get("/signup");
+router.get("/login");
+router.get("/signout");
 
 export default router;

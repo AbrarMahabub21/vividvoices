@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import authRoutes from "./routes/auth.routes.js";
+import connectToMongoDB from "./db/connectToMongoDB.js";
 const app = express();
 dotenv.config();
 
@@ -30,5 +31,6 @@ app.get("/api/auth/logout", (req, res) => {
 });
 
 app.listen(5000, () => {
+  connectToMongoDB();
   console.log(`app is running on port ${PORT}`);
 });
