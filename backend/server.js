@@ -24,6 +24,7 @@ app.use(express.json());
 // authentication //
 app.use("/api/auth", authRoutes);
 
+//listen to port //
 app.listen(5000, () => {
   connectToMongoDB();
   console.log(`app is running on port ${PORT}`);
