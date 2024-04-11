@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 
 //file imports
 import authRoutes from "./routes/auth.routes.js";
+import messageRoutes from "./routes/message.routes.js";
 import connectToMongoDB from "./DB/connectToMongoDB.js";
 
 //variables
@@ -23,6 +24,7 @@ app.use(express.json());
 
 // authentication //
 app.use("/api/auth", authRoutes);
+app.use("/api/messages", messageRoutes);
 
 //listen to port //
 app.listen(5000, () => {
