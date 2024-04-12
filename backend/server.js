@@ -1,7 +1,7 @@
 // package imports
 import express from "express";
 import dotenv from "dotenv";
-
+import cookieParser from "cookie-parser";
 //file imports
 import authRoutes from "./routes/auth.routes.js";
 import messageRoutes from "./routes/message.routes.js";
@@ -16,11 +16,7 @@ dotenv.config();
 
 //middleware to parse json data (from req.body in controllers)
 app.use(express.json());
-
-/*app.get("/", (req, res) => {
-  //root rout of the server https://localhost:5000
-  res.send("hello vividvoices created by Nowrid!");
-}); */
+app.use(cookieParser());
 
 // authentication //
 app.use("/api/auth", authRoutes);
