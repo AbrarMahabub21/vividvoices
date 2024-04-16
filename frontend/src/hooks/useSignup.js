@@ -1,6 +1,7 @@
 import toast from "react-hot-toast";
+import { useState } from "react";
 
-const userSignup = () => {
+const useSignup = () => {
   const [loading, setLoading] = useState(false);
   const signup = async ({
     fullName,
@@ -45,7 +46,7 @@ const userSignup = () => {
   return signup, loading;
 };
 
-export default userSignup;
+export default useSignup;
 
 function handleInputErrors({
   fullName,
