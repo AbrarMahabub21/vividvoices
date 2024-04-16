@@ -19,7 +19,7 @@ const userSignup = () => {
     if (!success) return;
     setLoading(true);
     try {
-      const res = fetch("http://localhost:5000/api/auth/signup", {
+      const res = fetch("/api/auth/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -41,6 +41,8 @@ const userSignup = () => {
       setLoading(false);
     }
   };
+
+  return signup, loading;
 };
 
 export default userSignup;
