@@ -5,14 +5,14 @@ const useSignup = () => {
   const [loading, setLoading] = useState(false);
   const signup = async ({
     fullName,
-    username,
+    userName,
     password,
     confirmPassword,
     gender,
   }) => {
     const success = handleInputErrors({
       fullName,
-      username,
+      userName,
       password,
       confirmPassword,
       gender,
@@ -27,7 +27,7 @@ const useSignup = () => {
         },
         body: JSON.stringify({
           fullName,
-          username,
+          userName,
           password,
           confirmPassword,
           gender,
@@ -43,19 +43,19 @@ const useSignup = () => {
     }
   };
 
-  return signup, loading;
+  return { signup, loading };
 };
 
 export default useSignup;
 
 function handleInputErrors({
   fullName,
-  username,
+  userName,
   password,
   confirmPassword,
   gender,
 }) {
-  if (!fullName || !username || !password || !confirmPassword || !gender) {
+  if (!fullName || !userName || !password || !confirmPassword || !gender) {
     toast.error("Please fill in all fields");
   }
 
