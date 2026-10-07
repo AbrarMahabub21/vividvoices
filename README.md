@@ -25,6 +25,3 @@ npm start
 
 Then open `http://localhost:3000`.
 
-## Next
-
-The plan is to add a Node.js, Express and MongoDB backend with real time messages.
